@@ -16,23 +16,7 @@ The system is designed as a proof of concept to demonstrate the viability of on-
 
 The software is structured as a pipeline of processing stages, each implemented as a separate MATLAB function. Data flows from raw CSV files through frequency identification, filtering, and phase correction before being mapped onto a PRPD heatmap.
 
-```mermaid
-flowchart TD
-    A[Data Files - 5 columns] --> B[Frequency Detection\nFFT identifies fundamental frequency]
-    B --> C[Filtering\nAdaptive low-pass filter removes HF content]
-    C --> D[Peak Detection\nPD events identified above noise threshold]
-    D --> E[Histogram Binning\nEvents mapped to phase-magnitude bins]
-    E --> G[Real-Time Display\nPRPD heatmaps updated after each file]
-    G --> DEC{More files?}
-    DEC -- Yes --> D
-    DEC -- No --> H[Export\nFinal figures saved as PNG]
-
-    R[Reference File - 4 columns] --> R1[Frequency Detection\nFFT identifies fundamental frequency]
-    R1 --> R2[Filtering\nAdaptive low-pass filter removes HF content]
-    R2 --> R3[Phase Determination\nPer-channel phase offsets]
-    R3 --> R4[Phase Calibration\nApplies offsets to reference]
-    R4 --> G
-```
+<img width="564" height="1054" alt="image" src="https://github.com/user-attachments/assets/46d447e5-d453-4a49-a19a-7654f49e8241" />
 
 > **Note:** Phase A is used as the reference phase throughout all detection and phase-relationship calculations.
 
