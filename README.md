@@ -1,6 +1,6 @@
 # PRPD Simulator – Detection and Visualisation of Partial Discharge in Inverter-Fed Electrical Machines
 
-**Author:** Naledi Majake | **Student ID:** 11138055 | **Date:** 29 April 2026
+**Author:** Naledi Majake | **Student ID:** 11138055 | **Date:** 01 May 2026
 
 ---
 
